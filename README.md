@@ -166,9 +166,11 @@ CHANGELOG.md
 
 ---
 
-## Licence
+## License
 
-Refer to the repository licence included with this project.
+This project is currently released under the MIT License during the Release Candidate (RC) phase.
+
+Licensing may be reviewed for future stable releases.
 
 ---
 
