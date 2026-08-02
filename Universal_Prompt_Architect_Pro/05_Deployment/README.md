@@ -194,3 +194,90 @@ Repository Certification
 
 Status:
 Production Baseline
+
+---
+
+# Deployment Decision Matrix
+
+This matrix helps determine the correct deployment workflow for common repository activities.
+
+It should be consulted before performing any deployment-related action.
+
+---
+
+## Deployment Decision Matrix
+
+| Scenario | Validation Required | Certification Required | Rollback Required | Primary Document | Supporting Document |
+|----------|---------------------|------------------------|-------------------|------------------|---------------------|
+| Initial production deployment | Yes | Yes | Yes | GEMINI_GEM_MANAGER_DEPLOYMENT_PROCEDURE.md / GEMINI_OPAL_DEPLOYMENT_PROCEDURE.md | PRODUCTION_GO_LIVE_CHECKLIST.md |
+| Repository documentation update | Yes | No | No | DEPLOYMENT_POLICY_AND_STRATEGY.md | VALIDATION_FRAMEWORK_POLICY.md |
+| Prompt update | Yes | Yes | Yes | GEMINI_GEM_MANAGER_DEPLOYMENT_PROCEDURE.md | PROMPT_VERSION_MANIFEST.md |
+| Knowledge package update | Yes | Yes | Yes | KNOWLEDGE_PACKAGE_MANIFEST.md | KNOWLEDGE_UPLOAD_MATRIX.md |
+| Runtime update | Yes | Yes | Yes | DEPLOYMENT_POLICY_AND_STRATEGY.md | VERSION_MANIFEST.md |
+| Governance update | Yes | Yes | No | GEM_DEVELOPMENT_GOVERNANCE_POLICY.md | VERSIONING_AND_CHANGE_MANAGEMENT_RULES.md |
+| Validation framework update | Yes | Yes | No | VALIDATION_FRAMEWORK_POLICY.md | ACCEPTANCE_TESTING_FRAMEWORK.md |
+| Emergency rollback | No | No | Execute Immediately | POST_DEPLOYMENT_OPERATIONS_AND_ROLLBACK.md | PRODUCTION_GO_LIVE_CHECKLIST.md |
+| New production release | Yes | Yes | Yes | DEPLOYMENT_POLICY_AND_STRATEGY.md | CHANGELOG.md |
+| Repository archival | No | No | No | REPOSITORY_ARCHIVAL_AND_LONG_TERM_PRESERVATION.md | FINAL_ENGINEERING_SIGN_OFF.md |
+
+---
+
+## Deployment Workflow
+
+```
+Identify Repository Change
+            │
+            ▼
+Determine Deployment Scenario
+            │
+            ▼
+Consult Deployment Decision Matrix
+            │
+            ▼
+Review Required Documents
+            │
+            ▼
+Perform Validation
+            │
+            ▼
+Perform Certification (if required)
+            │
+            ▼
+Deploy Repository
+            │
+            ▼
+Verify Deployment
+            │
+            ▼
+Monitor Operations
+            │
+            ▼
+Rollback (if required)
+```
+
+---
+
+## Deployment Principles
+
+Every production deployment shall:
+
+- Use a certified repository version.
+- Complete validation before deployment.
+- Follow the approved deployment procedures.
+- Maintain documentation synchronization.
+- Update Version Manifest where applicable.
+- Preserve rollback capability.
+- Record deployment activities.
+
+---
+
+## Related Documentation
+
+This decision matrix complements:
+
+- DEPLOYMENT_POLICY_AND_STRATEGY.md
+- GEMINI_GEM_MANAGER_DEPLOYMENT_PROCEDURE.md
+- GEMINI_OPAL_DEPLOYMENT_PROCEDURE.md
+- POST_DEPLOYMENT_OPERATIONS_AND_ROLLBACK.md
+- PRODUCTION_GO_LIVE_CHECKLIST.md
+- VERSION_MANIFEST.md
