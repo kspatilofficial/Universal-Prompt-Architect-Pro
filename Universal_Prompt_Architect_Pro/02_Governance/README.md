@@ -198,3 +198,92 @@ Repository Certification
 
 Status:
 Production Baseline
+
+---
+
+# Governance Decision Matrix
+
+The following matrix identifies the governing document that should be consulted before performing repository changes.
+
+This matrix is intended to help repository maintainers quickly identify the correct governance policy.
+
+---
+
+## Decision Matrix
+
+| Repository Activity | Primary Governing Document | Secondary Reference |
+|---------------------|----------------------------|---------------------|
+| Repository architecture changes | REPOSITORY_AND_ARCHITECTURE_FREEZE_RULES.md | GEM_DEVELOPMENT_GOVERNANCE_POLICY.md |
+| Folder restructuring | REPOSITORY_AND_ARCHITECTURE_FREEZE_RULES.md | Folder_Tree_Specification_v1.0.0.md |
+| New repository documents | PROMPT_DOCUMENTATION_AND_FILE_STANDARDS.md | GEM_DEVELOPMENT_GOVERNANCE_POLICY.md |
+| Prompt modifications | PROMPT_DOCUMENTATION_AND_FILE_STANDARDS.md | PROMPT_VERSION_MANIFEST.md |
+| Prompt version updates | PROMPT_VERSION_MANIFEST.md | VERSIONING_AND_CHANGE_MANAGEMENT_RULES.md |
+| Knowledge package updates | KNOWLEDGE_PACKAGE_MANIFEST.md | KNOWLEDGE_REFRESH_AND_SYNCHRONIZATION.md |
+| Knowledge upload decisions | KNOWLEDGE_UPLOAD_MATRIX.md | FILE_SELECTION_RULES.md |
+| Runtime updates | VERSION_MANIFEST.md | VERSIONING_AND_CHANGE_MANAGEMENT_RULES.md |
+| Repository version changes | VERSION_MANIFEST.md | VERSIONING_AND_CHANGE_MANAGEMENT_RULES.md |
+| Certification updates | VERSION_MANIFEST.md | FINAL_ENGINEERING_SIGN_OFF.md |
+| Deployment procedure updates | DEPLOYMENT_POLICY_AND_STRATEGY.md | PRODUCTION_GO_LIVE_CHECKLIST.md |
+| Validation procedure updates | VALIDATION_FRAMEWORK_POLICY.md | ACCEPTANCE_TESTING_FRAMEWORK.md |
+| Release preparation | VERSION_MANIFEST.md | CHANGELOG.md |
+| Repository archival | REPOSITORY_ARCHIVAL_AND_LONG_TERM_PRESERVATION.md | FINAL_ENGINEERING_SIGN_OFF.md |
+| Engineering process changes | GEM_DEVELOPMENT_LIFECYCLE_OVERVIEW.md | GEM_DEVELOPMENT_GOVERNANCE_POLICY.md |
+
+---
+
+## Governance Decision Workflow
+
+```
+Engineering Activity
+        │
+        ▼
+Identify Activity Type
+        │
+        ▼
+Consult Decision Matrix
+        │
+        ▼
+Open Governing Document
+        │
+        ▼
+Review Applicable Rules
+        │
+        ▼
+Implement Change
+        │
+        ▼
+Validate
+        │
+        ▼
+Update Repository Documentation
+        │
+        ▼
+Update Version Manifest (if applicable)
+```
+
+---
+
+## Governance Principles
+
+Every repository modification shall:
+
+- Follow the Repository First principle.
+- Preserve certified repository architecture.
+- Follow documented governance policies.
+- Complete validation before production use.
+- Maintain documentation synchronization.
+- Record version and certification changes where applicable.
+
+---
+
+## Related Documentation
+
+This matrix complements:
+
+- GEM_DEVELOPMENT_GOVERNANCE_POLICY.md
+- VERSIONING_AND_CHANGE_MANAGEMENT_RULES.md
+- REPOSITORY_AND_ARCHITECTURE_FREEZE_RULES.md
+- PROMPT_DOCUMENTATION_AND_FILE_STANDARDS.md
+- VERSION_MANIFEST.md
+- PROMPT_VERSION_MANIFEST.md
+- KNOWLEDGE_PACKAGE_MANIFEST.md
